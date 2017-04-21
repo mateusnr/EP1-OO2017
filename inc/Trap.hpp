@@ -1,0 +1,19 @@
+#ifndef TRAP_HPP
+#define TRAP_HPP
+
+#include "GameObject.hpp"
+
+class Trap : public GameObject
+{
+private:
+	int damage;
+public:
+	Trap();
+	~Trap();
+	int getDamage();
+	void setDamage(int damage);
+
+};
+
+
+#endif
