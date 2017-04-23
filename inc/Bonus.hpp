@@ -9,6 +9,7 @@ private:
 	int bonus;
 public:
 	Bonus();
+	Bonus(int x, int y);
 	~Bonus();
 	void setBonus(int bonus);
 	int getBonus();

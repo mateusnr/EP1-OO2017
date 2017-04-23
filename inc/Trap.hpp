@@ -9,6 +9,7 @@ private:
 	int damage;
 public:
 	Trap();
+	Trap(int x, int y);
 	~Trap();
 	int getDamage();
 	void setDamage(int damage);

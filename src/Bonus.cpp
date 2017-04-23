@@ -4,8 +4,16 @@ Bonus::Bonus()
 {
 	setPosX(0);
 	setPosY(0);
-	setObj('!');
-	setDamage(0);
+	setObj('+');
+	setBonus(0);
+}
+
+Bonus::Bonus(int x, int y)
+{
+	setPosX(x);
+	setPosY(y);
+	setObj('+');
+	setBonus(5);
 }
 
 Bonus::~Bonus() {}
@@ -17,5 +25,5 @@ void Bonus::setBonus(int bonus)
 
 int Bonus::getBonus()
 {
-	return bonus;s
+	return bonus;
 }

@@ -8,6 +8,15 @@ Trap::Trap()
 	setDamage(0);
 }
 
+Trap::Trap(int x, int y)
+{
+	setPosX(x);
+	setPosY(y);
+	setObj('*');
+	setDamage(5);
+
+}
+
 Trap::~Trap() {}
 
 int Trap::getDamage()

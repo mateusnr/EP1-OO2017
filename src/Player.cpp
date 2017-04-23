@@ -4,7 +4,7 @@ Player::Player()
 {
 	setPosX(0);
 	setPosY(0);
-	setObj(0);
+	setObj('>');
 	lives = 0;
 	alive = true;
 	score = 0;
@@ -50,5 +50,5 @@ int Player::getScore()
 
 void Player::setScore(int score)
 {
-	this->score = score;
+	this->score += score;
 }
