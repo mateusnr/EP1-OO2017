@@ -2,10 +2,25 @@
 
 Map::Map()
 {
-	file_path = "./doc/map.txt";
+	this->file_path = "./doc/map.txt";
+}
+
+Map::Map(std::string file_path)
+{
+	this->file_path = file_path;
 }
 
 Map::~Map() {} 
+
+size_t Map::getMaxX()
+{
+	return max_x;
+}
+
+size_t Map::getMaxY()
+{
+	return max_y;
+}
 
 void Map::setFilePath(std::string file_path)
 {
@@ -42,3 +57,4 @@ std::vector<std::string> Map::generateMap()
 	return mapM;
 
 }
+

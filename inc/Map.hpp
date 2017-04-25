@@ -14,6 +14,7 @@ private:
 	const size_t max_y = 50;
 public:
 	Map();
+	Map(std::string file_path);
 	~Map();
 	size_t getMaxX();
 	size_t getMaxY();

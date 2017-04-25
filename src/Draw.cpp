@@ -76,5 +76,25 @@ void Draw::printBonus(std::vector<Bonus> bonuses)
 	}
 }
 
+void Draw::insertObject(GameObject * object)
+{
+	move(object->getPosY(), object->getPosX());
+	addch(object->getObj());
+	refresh();
+}
+
+void Draw::putDelay()
+{
+	unsigned int retTime = time(0) + delay/20;
+	while (time(0) < retTime);
+
+}
+
+void Draw::showScore(int score)
+{
+	move(23, 5);
+	printw("SCORE: %d", score);
+	refresh();
+}
 
 
