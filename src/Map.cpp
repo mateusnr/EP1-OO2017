@@ -12,15 +12,6 @@ Map::Map(std::string file_path)
 
 Map::~Map() {} 
 
-size_t Map::getMaxX()
-{
-	return max_x;
-}
-
-size_t Map::getMaxY()
-{
-	return max_y;
-}
 
 void Map::setFilePath(std::string file_path)
 {

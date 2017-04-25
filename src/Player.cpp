@@ -5,6 +5,7 @@ Player::Player()
 	setPosX(0);
 	setPosY(0);
 	setObj('@');
+	setDirection(0);
 	lives = 0;
 	alive = true;
 	victory = false;
@@ -16,6 +17,7 @@ Player::Player(int posX, int posY)
 	setPosX(posX);
 	setPosY(posY);
 	setObj('@');
+	setDirection(0);
 	lives = 0;
 	alive = true;
 	victory = false;
@@ -27,12 +29,14 @@ char Player::getDirection()
 	return direction;
 }
 
+//seta a direcao do player baseado na entrada
 void Player::setDirection(char direction)
 {
 	if (direction == 'a') { this->direction = 'l'; return;}
 	else if (direction == 'd') { this->direction = 'r'; return;}
 	else if (direction == 'w') { this->direction = 'u'; return;}
 	else if (direction == 's') { this->direction = 'd'; return;}
+	else { this->direction = 0; }
 }
 
 //destrutor
@@ -92,6 +96,7 @@ void Player::changeCoordinates()
 	setDirection(0);
 }
 
+//move o player
 void Player::movePlayer(Collider col)
 {
 	char command = tolower(getch());
@@ -100,7 +105,9 @@ void Player::movePlayer(Collider col)
 
 	setDirection(command);
 	if (col.isCollision(this, getDirection()))
+	{
 		setDirection(0);
+	}
 
 	changeCoordinates();
 }

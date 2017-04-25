@@ -16,6 +16,11 @@ Bonus::Bonus(int x, int y)
 	setBonus(5);
 }
 
+void Bonus::setXY(int x, int y)
+{
+	setPosX(x);
+	setPosY(y);
+}
 Bonus::~Bonus() {}
 
 void Bonus::setBonus(int bonus)

@@ -13,7 +13,7 @@ public:
 	~Trap();
 	int getDamage();
 	void setDamage(int damage);
-
+	void setXY(int x, int y);
 };
 
 

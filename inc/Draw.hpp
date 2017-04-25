@@ -33,8 +33,6 @@ public:
 	void showScreen();
 	void printTrap(std::vector<Trap> traps);
 	void printBonus(std::vector<Bonus> bonuses);
-	bool showMenu(size_t x, size_t y);
-
 
 };
 

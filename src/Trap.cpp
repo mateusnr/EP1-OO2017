@@ -17,6 +17,12 @@ Trap::Trap(int x, int y)
 
 }
 
+void Trap::setXY(int x, int y)
+{
+	setPosX(x);
+	setPosY(y);
+}
+
 Trap::~Trap() {}
 
 int Trap::getDamage()

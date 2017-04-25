@@ -8,6 +8,7 @@ Collider::Collider(std::vector<std::string> mapM)
 	this->mapM = mapM;
 }
 
+//verificador de colisoes
 bool Collider::checkCollision(int x, int y, char direction)
 {
 	switch (direction)
@@ -50,6 +51,8 @@ bool Collider::isCollision(GameObject *object, char direction)
 	return checkCollision(object->getPosX(), object->getPosY(), direction);
 }
 
+
+//Verifica colisao de player com algum objeto
 bool Collider::isPlayerCollision(GameObject *playerObject, GameObject *object)
 {
 	if ((playerObject->getPosY() == object->getPosY()) and 

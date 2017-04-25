@@ -1,5 +1,6 @@
 #include "../inc/Draw.hpp"
 
+//recebe a matriz do mapa
 Draw::Draw(Map map, int delay)
 {
 	try {
@@ -39,6 +40,7 @@ void Draw::clearMatrix()
 	mapM.clear();
 }
 
+//printa a matriz
 void Draw::showScreen()
 {
 	for(size_t i = 0; i < mapM.size(); i++)
@@ -48,6 +50,7 @@ void Draw::showScreen()
 	}
 }
 
+//insere um objeto na tela
 void Draw::insertObject(char obj, int x, int y)
 {
 	move(y, x);
@@ -55,6 +58,7 @@ void Draw::insertObject(char obj, int x, int y)
 	refresh();
 }
 
+//mostra as traps do mapa
 void Draw::printTrap(std::vector<Trap> traps)
 {
 	for(size_t i = 0;i < traps.size(); i++)
@@ -65,7 +69,7 @@ void Draw::printTrap(std::vector<Trap> traps)
 	}
 }
 
-
+//mostra os bonus do mapa
 void Draw::printBonus(std::vector<Bonus> bonuses)
 {
 	for(size_t i = 0; i < bonuses.size(); i++)
@@ -76,6 +80,7 @@ void Draw::printBonus(std::vector<Bonus> bonuses)
 	}
 }
 
+//insere um objeto qualquer
 void Draw::insertObject(GameObject * object)
 {
 	move(object->getPosY(), object->getPosX());
@@ -89,10 +94,10 @@ void Draw::putDelay()
 	while (time(0) < retTime);
 
 }
-
+//mostra o score
 void Draw::showScore(int score)
 {
-	move(23, 5);
+	move(23, 0);
 	printw("SCORE: %d", score);
 	refresh();
 }

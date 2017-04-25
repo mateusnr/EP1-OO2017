@@ -13,6 +13,7 @@ public:
 	~Bonus();
 	void setBonus(int bonus);
 	int getBonus();
+	void setXY(int x, int y);
 
 };
 
