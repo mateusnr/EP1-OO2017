@@ -4,7 +4,7 @@ Esse projeto consiste em um jogo de labirinto simples. Desenvolvido com o intuit
 
 # Como jogar
 
-Use as teclas W, A, S, D para se movimentar. O jogo finalizará quando o jogador tiver menos que 0 pontos ou quando chegar ao ponto de chegada.
+Use as teclas W, A, S, D para se movimentar. O jogo finalizará quando o jogador tiver menos que 0 pontos ou quando chegar ao fim do labirinto
 
 # Instalação e Execução
 
